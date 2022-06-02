@@ -101,6 +101,7 @@ def file_to_binary_tree(file_name: str) -> BinaryTree:
 
 def main():
     input_string = input("Please enter a valid expression:")
+    print('')
 
     ## Simulating expressions via the stack.
     stack = []       # Maintaining a stack of operands and operators.
@@ -130,8 +131,11 @@ def main():
     if len(stack) != 1:
         print(input_string, 'Not a valid expression, brackets mismatched.')
     else:
+        print("The result of the calculation of the expression: ", end='')
         print(stack[0])
+        print('')
 
+    print("Visualise the generated binary tree:")
     BinaryTree.inorder(node_stack[-1], 0)
 
 if __name__ == '__main__':
