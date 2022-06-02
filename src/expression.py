@@ -132,7 +132,7 @@ def main():
     else:
         print(stack[0])
 
-    BinaryTree.inorder(node_stack[-1])
+    BinaryTree.inorder(node_stack[-1], 0)
 
 if __name__ == '__main__':
     main()
